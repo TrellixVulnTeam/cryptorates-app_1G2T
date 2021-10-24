@@ -3,8 +3,6 @@ import { useTranslation } from 'react-i18next';
 
 import { IHistoricPrices } from '../../../models/crypto';
 
-import CSvg from '../../ui/CSvg/CSvg';
-
 import classes from './HistoricPrices.module.scss';
 
 interface Props {
@@ -29,10 +27,6 @@ const HistoricPricesView: React.FC<Props> = (props: React.PropsWithChildren<Prop
                   {price.price}
                   {t('historicPrices.date')}
                   {price.createdAt}
-                  {/* <CSvg
-                    className={classes['innerContainer__icon']}
-                    name={`${currency}`} 
-                  /> */}
                 </li>
               )
             })}
