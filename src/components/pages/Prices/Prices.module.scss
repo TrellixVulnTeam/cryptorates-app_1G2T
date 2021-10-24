@@ -1,0 +1,49 @@
+@import '../../../styles/variables.scss';
+
+.prices {
+  padding: map-get($sizes, minimal-padding); 
+  background-color: map-get($colors, background-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__header {
+    margin-bottom: 20px;
+    font-size: 5.5rem;
+    font-family: 600;
+    color: #fff;
+    text-shadow: 9px 8px 0px rgba(0,0,0,0.15);
+  }
+}
+
+.innerContainer {
+  display: flex;
+  align-items: center;
+  border: 3px solid #2d2d2d;
+  padding: 3px 10px;
+  background-color: map-get($colors, main);
+  box-shadow: 0 0 6px #ccc;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    height: 50px;
+    width: auto;
+  }
+
+  &__text {
+    font-size: 4rem;
+    font-weight: 700;
+
+    &:not(:last-child) {
+      margin: 0 10px 0 10px;
+    }
+  }
+}

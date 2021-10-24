@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { AxiosResponse } from 'axios';
 
-function App() {
+import { backendAPIAxios } from './utils/http';
+
+import AppView from './App.view';
+
+interface Props { }
+
+const App: React.FC<Props> = (props: React.PropsWithChildren<Props>) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppView></AppView>
   );
-}
+};
 
-export default App;
+App.displayName = 'App';
+App.defaultProps = {};
+
+export default React.memo(App);
