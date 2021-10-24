@@ -2,7 +2,6 @@
 
 .historicPrices {
   padding: map-get($sizes, minimal-padding);
-  background-color: map-get($colors, background-color);
 }
 
 .container {
@@ -24,19 +23,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid #2d2d2d;
-  padding: 3px 10px;
-  background-color: map-get($colors, main);
-  box-shadow: 0 0 6px #ccc;
   font-size: 3rem;
-  font-weight: 700;
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
+  font-weight: 600;
 
   &__text {
-    margin: 5px;
     list-style-type: none;
+    border: 3px solid #2d2d2d;
+    background-color: map-get($colors, main);
+    box-shadow: 0 0 6px #ccc;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 }

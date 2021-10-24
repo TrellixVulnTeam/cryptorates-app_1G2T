@@ -1,8 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import classes from './App.module.scss';
-
 const Prices = React.lazy(() => import('./components/pages/Prices/Prices'));
 const HistoricPrices = React.lazy(() => import('./components/pages/HistoricPrices/HistoricPrices'));
 

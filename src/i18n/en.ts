@@ -2,9 +2,9 @@ const en = {
     prices: {
         header: 'Latest Cryptocurrency Prices by Daniel',
         text: {
-            btc: 'Bitcoin',
-            eth: 'Ethereum',
-            ltc: 'Litecoin',
+            btc: 'Bitcoin past prices',
+            eth: 'Ethereum past prices',
+            ltc: 'Litecoin past prices',
         },
         currency: {
             btc: 'BTCUSD: ',
@@ -13,7 +13,7 @@ const en = {
         },
     },
     historicPrices: {
-        header: 'Historical Bitcoin Cryptocurrency Prices by Daniel',
+        header: 'Historical Cryptocurrency Prices by Daniel',
         currency: {
             BTCUSD: 'BTCUSD: ',
             ETHUSD: 'ETHUSD: ',

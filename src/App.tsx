@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react';
-import { AxiosResponse } from 'axios';
-
-import { backendAPIAxios } from './utils/http';
+import React from 'react';
 
 import AppView from './App.view';
 

@@ -2,7 +2,6 @@
 
 .prices {
   padding: map-get($sizes, minimal-padding); 
-  background-color: map-get($colors, background-color);
 }
 
 .container {
@@ -23,9 +22,8 @@
 
 .innerContainer {
   display: flex;
-  align-items: center;
   border: 3px solid #2d2d2d;
-  padding: 3px 10px;
+  padding: 50px;
   background-color: map-get($colors, main);
   box-shadow: 0 0 6px #ccc;
 
@@ -36,6 +34,15 @@
   &__text {
     font-size: 4rem;
     font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+    counter-reset: a;
+
+    &:hover {
+      color: #2d2d2d;
+    }
 
     &:not(:last-child) {
       margin: 0 10px 0 10px;

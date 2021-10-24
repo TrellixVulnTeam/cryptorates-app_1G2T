@@ -20,21 +20,23 @@ const HistoricPrices: React.FC<Props> = (props: React.PropsWithChildren<Props>) 
 
   let search = window.location.search;
 
+  const fetchData = () => {
+    backendAPIAxios.get(`/history${search}`)
+    .then((response: AxiosResponse<IHistoricPricesResponse>) => {
+      if (!response.data.success) {
+        return alert(`Failed to get historic prices with error: ${response.data.message}`)
+      }
+
+      sethistoricPricesState(() => response.data.data!);
+    })
+    .catch((e: AxiosError) => {
+      alert(`Failed to get historic prices with error: ${e}`)
+    });
+  };
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      backendAPIAxios.get(`/history${search}`)
-      .then((response: AxiosResponse<IHistoricPricesResponse>) => {
-        if (!response.data.success) {
-          return alert(`Failed to get historic prices with error: ${response.data.message}`)
-        }
-
-        sethistoricPricesState(() => response.data.data!);
-      })
-      .catch((e: AxiosError) => {
-        alert(`Failed to get historic prices with error: ${e}`)
-      })
-    }, 300000);
-
+    fetchData();
+    const interval = setInterval(() => fetchData(), 300000);
     return () => clearInterval(interval);
   }, [sethistoricPricesState]);
 

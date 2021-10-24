@@ -19,21 +19,23 @@ const Prices: React.FC<Props> = (props: React.PropsWithChildren<Props>) => {
   const [ pricesState, setPricesState ] = useState<IPrices | null>(null);
   const pricesChangeHandler = (value: IPrices | null) => setPricesState(() => value);
 
+  const fetchData = () => {
+    backendAPIAxios.get(`/prices`)
+    .then((response: AxiosResponse<IPricesResponse>) => {
+      if (!response.data.success) {
+        return alert(`Failed to get prices with error: ${response.data.message}`)
+      }
+
+      setPricesState(() => response.data.data!);
+    })
+    .catch((e: AxiosError) => {
+      alert(`Failed to get prices with error: ${e}`)
+    })
+  };
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      backendAPIAxios.get(`/prices`)
-      .then((response: AxiosResponse<IPricesResponse>) => {
-        if (!response.data.success) {
-          return alert(`Failed to get prices with error: ${response.data.message}`)
-        }
-
-        setPricesState(() => response.data.data!);
-      })
-      .catch((e: AxiosError) => {
-        alert(`Failed to get prices with error: ${e}`)
-      })
-    }, 300000);
-
+    fetchData();
+    const interval = setInterval(() => fetchData(), 300000);
     return () => clearInterval(interval);
   }, [setPricesState]);
 
