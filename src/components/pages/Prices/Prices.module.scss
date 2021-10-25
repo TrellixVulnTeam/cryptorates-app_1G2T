@@ -34,11 +34,6 @@
   &__text {
     font-size: 4rem;
     font-weight: 700;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 20ch;
-    counter-reset: a;
 
     &:hover {
       color: #2d2d2d;
