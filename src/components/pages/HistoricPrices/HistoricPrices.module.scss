@@ -22,15 +22,22 @@
 .innerContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   font-size: 3rem;
   font-weight: 600;
-
+  background-color: #DBE2EF;
+  border: solid 15px #3F72AF;
+  border-radius: 20px;
+  box-shadow: 0 0 60px #000;
+  
   &__text {
+    justify-self: start;
     list-style-type: none;
-    border: 3px solid #2d2d2d;
+    border: 5px solid #263c55;
     background-color: map-get($colors, main);
     box-shadow: 0 0 6px #ccc;
-    margin-bottom: 15px;
+    padding: 7px;
+    margin: 15px;
+    border-radius: 10px;
   }
 }

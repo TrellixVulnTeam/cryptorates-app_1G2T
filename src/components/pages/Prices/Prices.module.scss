@@ -22,10 +22,12 @@
 
 .innerContainer {
   display: flex;
+  justify-content: space-between;
   border: 3px solid #2d2d2d;
-  padding: 50px;
+  padding: 40px 20px;
   background-color: map-get($colors, main);
   box-shadow: 0 0 6px #ccc;
+  border-radius: 20px;
 
   &:not(:last-child) {
     margin-bottom: 20px;

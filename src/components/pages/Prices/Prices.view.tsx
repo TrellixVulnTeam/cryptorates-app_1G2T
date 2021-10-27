@@ -20,15 +20,15 @@ const PricesView: React.FC<Props> = (props: React.PropsWithChildren<Props>) => {
         <div className={classes['outerContainer']}>
           <div className={classes['innerContainer']}>
             <a className={classes['innerContainer__text']} href={'/history?currency=BTCUSD'}>{t('prices.text.btc')}</a>
-            <span className={classes['innerContainer__text']}>- {t('prices.currency.btc')} {props.prices?.BTCUSD}</span>
+            <p className={classes['innerContainer__text']}>{t('prices.currency.btc')} {props.prices?.BTCUSD}</p>
           </div>
           <div className={classes['innerContainer']}>
             <a className={classes['innerContainer__text']} href={'/history?currency=ETHUSD'}>{t('prices.text.eth')}</a>
-            <span className={classes['innerContainer__text']}>- {t('prices.currency.eth')} {props.prices?.ETHUSD}</span>
+            <span className={classes['innerContainer__text']}>{t('prices.currency.eth')} {props.prices?.ETHUSD}</span>
           </div>
           <div className={classes['innerContainer']}>
             <a className={classes['innerContainer__text']} href={`/history?currency=LTCUSD`}>{t('prices.text.ltc')}</a>
-            <span className={classes['innerContainer__text']}>- {t('prices.currency.ltc')} {props.prices?.LTCUSD}</span>
+            <span className={classes['innerContainer__text']}>{t('prices.currency.ltc')} {props.prices?.LTCUSD}</span>
           </div>
         </div>
       </div>
