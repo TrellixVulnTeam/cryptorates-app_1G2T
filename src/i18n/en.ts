@@ -11,6 +11,7 @@ const en = {
             eth: 'ETHUSD: ',
             ltc: 'LTCUSD: ',
         },
+        error: 'No prices available',
     },
     historicPrices: {
         header: 'Historical Cryptocurrency Prices by Daniel',
@@ -19,7 +20,8 @@ const en = {
             ETHUSD: 'ETHUSD: ',
             LTCUSD: 'LTCUSD: ',
         },
-        date: ' - Date: '
+        date: ' - Date: ',
+        error: 'No prices available',
     }
 };
 

@@ -20,7 +20,9 @@ const HistoricPricesView: React.FC<Props> = (props: React.PropsWithChildren<Prop
       <div className={classes['container']}>
         <h1 className={classes['container__header']}>{t('historicPrices.header')}</h1>
           <div className={classes['innerContainer']}>
-            {props.historicPrices?.map((price, idx) => {
+            {props.historicPrices == null || props.historicPrices.length === 0 ? 
+            <p className={classes['innerContainer__text']}>{t('historicPrices.error')}</p> : 
+            props.historicPrices?.map((price, idx) => {
               return (
                 <li className={classes['innerContainer__text']} key={idx}>
                   {t(`historicPrices.currency.${currency}`)}

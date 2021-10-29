@@ -25,19 +25,20 @@
   align-items: flex-end;
   font-size: 3rem;
   font-weight: 600;
-  background-color: #DBE2EF;
-  border: solid 15px #3F72AF;
+  background-color: #334756;
+  border: solid 15px map-get($colors, main);
   border-radius: 20px;
   box-shadow: 0 0 60px #000;
   
   &__text {
+    padding: 7px;
+    margin: 15px;
     justify-self: start;
     list-style-type: none;
     border: 5px solid #263c55;
+    box-shadow: 0 0 20px map-get($colors, main);
     background-color: map-get($colors, main);
-    box-shadow: 0 0 6px #ccc;
-    padding: 7px;
-    margin: 15px;
+    color: #fff;
     border-radius: 10px;
   }
 }
